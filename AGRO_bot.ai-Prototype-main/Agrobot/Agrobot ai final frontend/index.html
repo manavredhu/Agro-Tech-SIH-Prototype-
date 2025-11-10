@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ArgoBot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Go to Home">
+        <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/robotframework.svg" alt="" />
+        <span>ArgoBot</span>
+      </a>
+
+      <div class="nav-links">
+        <!-- Farmer AI dropdown: front page + chatbot -->
+        <a href="#chatbot">ArgoBot</a>
+        <a href="#chatbot">Chatbot</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQs</a>
+        <a href="#about">About</a>
+      </div>
+     
+
+      <div class="nav-actions">
+        <a class="btn" href="#chatbot">Try Chatbot</a>
+        <a class="btn" href="#call_to_expert">📞Call to Expert</a>
+        <a class="btn primary" href="#pricing">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO (Front Page) -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg">
+      <img class="bg" src="https://manifesto.inc.in/images/farmers/nextImageExportOptimizer/farmers-opt-2048.WEBP" alt="Farming field background" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <h1>ArgoBot</h1>
+      <p>AI chatbot by <a href="#home" class="accent">ArgoBot</a> × <a href="#about" class="accent"></a> to help farmers with local, practical guidance.</p>
+
+      <div class="country-tabs">
+        <button class="tab active" data-region="north">North India</button>
+        <button class="tab" data-region="south">South India</button>
+        <button class="tab" data-region="east">East India</button>
+        <button class="tab" data-region="west">West India</button>
+      </div>
+      <div class="tab-underline"></div>
+
+      <p class="lang-caption">Chat in the following languages:</p>
+      <div class="lang-grid" id="langGrid"></div>
+    </div>
+  </section>
+
+  <!-- CHATBOT WIDGET -->
+  <section id="chatbot" class="no-wa" aria-label="Chatbot">
+    <div class="container">
+      <h2>Ask your farming question</h2>
+      <p>No WhatsApp? No problem — type here.</p>
+      <div class="widget">
+        <div class="widget-head">
+          <strong>ArgoBot</strong>
+        </div>
+        <div class="widget-body">
+          <p class="widget-title">Your digital farming companion.</p>
+          <!-- Add this inside your widget-body -->
+<div class="chat-messages" id="chatMessages">
+  <div class="message bot-message">
+      <p>Hello! I'm ArgoBot. How can I help with your farming questions today?</p>
+  </div>
+</div>
+          <div class="chips">
+            <button class="chip">When should I plant chili?</button>
+            <button class="chip">How do I get rid of black ants on coffee?</button>
+            <button class="chip">How to improve rice yield?</button>
+            <button class="chip">Best sowing time for maize?</button>
+          </div>
+          <div class="message-input">
+            <span aria-hidden="true" class="plus">＋</span>
+            <input id="msg" placeholder="Type your message…" />
+            <input type="text" id="chatInput" />
+<button id="cameraBtn" class="send">📷</button>
+<button id="micBtn" class="send">🎤</button>
+            <button class="send" id="send" aria-label="Send message">➤</button>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- call_to_expert -->
+  <section id="call_to_expert" class="call_to_expert" aria-label="Call to Expert">
+    <div class="container2">
+      <h3  id="section-heading2" class="section-heading2">Call to Expert</h3>
+      <div id="container3" class="container3">
+        <p>If you need personalized assistance, feel free to reach out to your local Government official's expert.</p>
+      </div>
+      <div id="container4" class="container4">
+        <p>You can contact the Kisan Call Centre with a toll-free government helpline, In your local language.</p>
+      </div>
+    </div>
+
+        <a class="reachBtn" id="reachBtn" href="tel:1800-180-1551" role="button" aria-label="Call toll-free helpline">☎️ Call Now </a>
+    </div>
+  </section>
+  <!-- PRICING -->
+  <section id="pricing" class="pricing" aria-label="Pricing">
+    <div class="container">
+      <h3 class="section-heading">Pricing</h3>
+
+      <div class="pricing-grid">
+        <!-- Left comparison card -->
+        <div class="card compare">
+          <h4>Individual AI Subscriptions</h4>
+          <div class="price-line">
+            <span class="big"> ~₹10,000</span>
+      
+          </div>
+          <ul class="list">
+            <li>ChatGPT 5 — $20/mo</li>
+            <li>Google Gemini 2.5 Pro — $20/mo</li>
+            <li>Perplexity Sonar Pro — $20/mo</li>
+            <li>Claude Sonnet 4 — $20/mo</li>
+            <li>Grok 4 — $30/mo</li>
+          </ul>
+          <div class="negatives">
+            <span>✗ Multiple subscriptions to manage</span>
+            <span>✗ Constant tab switching</span>
+            <span>✗ No comparison features</span>
+          </div>
+        </div>
+
+        <!-- Right product card -->
+        <div class="card highlight">
+          <div class="brand-line">
+            <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/robotframework.svg" alt="" />
+            <span>ArgoBot</span>
+          </div>
+
+          <div class="plan-switch">
+            <button class="plan-btn active" data-plan="monthly">₹0 <small>/Month</small></button>
+            <button class="plan-btn" data-plan="yearly">₹0 <small>/Year</small></button>
+          </div>
+
+          <div class="badge">Ultimate Promptbook & Community Access</div>
+
+          <ul class="checks">
+            <li>✓ All premium AI models included</li>
+            <li>✓ Side-by-side comparison</li>
+            <li>✓ 400,000 tokens / month</li>
+            <li>✓ Instant prompt enhancement</li>
+            <li>✓ Image generation & audio transcription</li>
+          </ul>
+
+          <a href="#faq" class="btn xl primary block">Get Started Now →</a>
+          <p class="tiny muted">Payments processed via Razorpay & Stripe</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq" aria-label="Frequently Asked Questions">
+    <div class="container">
+      <h3 class="section-heading">Frequently Asked Questions (FAQs)</h3>
+
+      <div class="accordion" role="tablist">
+        <div class="item">
+          <button class="acc-btn" aria-expanded="false">How is ArgoBot different from subscribing to each AI separately?</button>
+          <div class="acc-panel">
+            <p>You get multiple premium models in one place with side-by-side comparison and a single bill, saving cost and time.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button class="acc-btn" aria-expanded="false">Can I choose which AI models to use?</button>
+          <div class="acc-panel">
+            <p>Yes. Pick the model per chat or compare outputs across models in one screen.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button class="acc-btn" aria-expanded="false">Do I get unlimited messages?</button>
+          <div class="acc-panel">
+            <p>Messages are generous but metered by a monthly token limit to keep usage fair.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button class="acc-btn" aria-expanded="false">What happens if I run out of tokens?</button>
+          <div class="acc-panel">
+            <p>You’ll be prompted to top up or wait until your monthly quota resets.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button class="acc-btn" aria-expanded="false">How do i reach my local goverment's farmer officer?</button>
+          <div class="acc-panel">
+            <p>You can reach out to local goverment's farmer officer by just one click to "☎️ Call Now" button, Given above.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button class="acc-btn" aria-expanded="false">Can I use ArgoBot on my phone?</button>
+          <div class="acc-panel">
+            <p>Yes, the web app is fully responsive and works well on mobile browsers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container">
+      <h3 class="section-heading">About Us</h3>
+      <p class="about-description">We're a passionate team dedicated to making agricultural knowledge accessible through AI technology. Our diverse backgrounds in agriculture, technology, and AI come together to create ArgoBot.ai.</p>
+  <div class="member-card">
+          <img src="manav_ki_hot_phot.jpeg" alt="Jagjit's headshot" class="member-photo">
+          <h4>Manav</h4>
+          <p class="role">Front End Developer</p>
+          <p class="bio">Builds the knowledge base and ensures information accuracy for farmers.</p>
+        </div>
+
+        <div class="member-card">
+          <img src="sam_ki_hot_photo.jpeg" alt="Jagjit's headshot" class="member-photo">
+          <h4>Swayam</h4>
+          <p class="role">Front End Developer</p>
+          <p class="bio">Builds the knowledge base and ensures information accuracy for farmers.</p>
+        </div>
+
+        <div class="member-card">
+          <img src="jagjit_ka_hot_phot.jpeg" alt="Jagjit's headshot" class="member-photo">
+          <h4>Jagjit</h4>
+          <p class="role">Back End Developer</p>
+          <p class="bio">Builds the knowledge base and ensures information accuracy for farmers.</p>
+        </div>
+
+        <div class="member-card">
+          <img src="tanishka_ki_photo.jpeg" alt="Jagjit's headshot" class="member-photo">
+          <h4>Tanishka</h4>
+          <p class="role">Back End Developer</p>
+          <p class="bio">Builds the knowledge base and ensures information accuracy for farmers.</p>
+        </div>
+         <div class="member-card">
+          <img src="himanshu_ki_hot_photo.jpeg" alt="Jagjit's headshot" class="member-photo">
+          <h4>Himanshu</h4>
+          <p class="role">Debugger</p>
+          <p class="bio">Helps in debugging and improving the codebase.</p>
+        </div>
+        <div class="member-card">
+          <img src="harish_ki_hot_photo.jpeg" alt="Jagjit's headshot" class="member-photo">
+          <h4>Harish</h4>
+          <p class="role">Data scraper</p>
+          <p class="bio">Scrapes data from various sources.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© copyrighted by ARGO Tech 2025</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+version: "3.9"
+services:
+  mongo:
+    image: mongo:6.0
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: kisanai
+    volumes:
+      - mongo-data:/data/db
+
+  web:
+    build: .
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URL=mongodb://mongo:27017
+      - MONGO_DB=kisanai
+      - JWT_SECRET=change_this_secret
+      - OPENWEATHER_API_KEY=your_openweather_key
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/usr/src/app
+    restart: on-failure
+
+volumes:
+  mongo-data:
